@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HeySocial Desktop App</title>
+<style>
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 0;
+    background: #f5f7fa;
+    color: #2c3e50;
+  }
+  header {
+    background-color: #ae1313f6;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  nav {
+    display: flex;
+    background-color: #eee;
+    padding: 10px 20px;
+    gap: 20px;
+  }
+  nav button {
+    background: none;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ae1313f6;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+  nav button:hover, nav button.active {
+    background-color: #ae1313f6;
+    color: white;
+  }
+  main {
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    min-height: 600px;
+  }
+  h2 {
+    color: #ae1313f6;
+    margin-top: 0;
+  }
+  img.responsive {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+  iframe {
+    width: 100%;
+    height: 700px;
+    border: none;
+    border-radius: 8px;
+  }
+  footer {
+    text-align: center;
+    color: #999;
+    padding: 15px 0;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<header>HeySocial!</header>
+
+<nav>
+  <button id="btn-anasayfa" class="active">Ana Sayfa</button>
+  <button id="btn-iletisim">İletişim</button>
+  <button id="btn-takvim">Takvim</button>
+  <button id="btn-geribildirim">Geri Bildirim</button>
+  <img class="responsive" src="Hey Social.jpg" alt="HeySocial Logo" width = "55" height = "55"/>
+</nav>
+
+<main id="content">
+  <!-- İçerik buraya JS ile gelecek -->
+</main>
+
+<footer>© 2025 HeySocial (Coded by Muhammed Eymen Günay)</footer>
+
+<script>
+  const content = document.getElementById('content');
+
+  // Sayfa içerikleri
+  const pages = {
+    anasayfa: `
+      <h2>HeySocial Kuruluş Amacı</h2>
+      <p><!-- NOT: Buraya kuruluş amacı yazısını ekle --></p>
+      <p>Hey Social aslında bir şirket değildir fakat olacak kadar değerlidir. Çünkü burada insanların görüşleri önemsenir ve spor yaptırılır. Ayrıca bir spor hareketinin yarışı yapılır arada sırada kazanana cafe vb. yerlerde istediği ısmarlanır. Bence burası herkes için gerekli  gereklidir.z</p>  
+      <h2>Kurucumuz</h2>
+      <p><!-- NOT: Buraya kurucu hakkında bilgi yazısı --></p>
+      <h3>Çağın Mert Parlak kimdir?</h3>  
+      <img class="responsive" src="cagin_hoca.jpg" alt="Kurucu_profil" />  
+      <h2>Antrenman işleyişimiz</h2>
+      <p><!-- NOT: Buraya hocamızın ne kadar güzel ve fedakar olduğunu anlatan yazı --></p>
+      <p>Burnout yani Exedra Sports'taki derslerimiz, önce ısnıma yani germe, lunch vb. bölümlerle başlıyor sonra birkaç bölüm oluyor, tabii ki en hareketli bölüm de asla eksik edilmez. Benim en önemsediğim şey dizleri olduğumuz yerde hızlı ve çok yüksek çekebilmek. Tabii bu da zamanla olabilecek bir şey.</p>  
+      <h1>Whatsapp Grubumuza katılmak için <a href = "https://chat.whatsapp.com/Iq3oIvkUDuS44WIWxgMCLB">BURAYA TIKLAYIN</h1>
+      
+    `,
+    
+    iletisim: `
+      <h2>İletişim</h2>
+
+      <p>HeySocial web sitesi: <a href="https://hey-social.vercel.app/" target="_blank" rel="noopener noreferrer">https://hey-social.vercel.app/</a></p>
+      <h1>Hey Social İletişim bilgileri</h1>
+      <h2>Tel no(Çağın Mert Parlak): +90 0 (553) 258 44 09</h2>
+      <h2>Benim instagram hesabıma:</h2>
+      <a href="https://www.instagram.com/caginmertparlak/">Buradan ulaşabilirsiniz.</a>
+      <br>
+      <br>
+      <br>
+      <h2>Hey Social'ın İnstagram hesabına:</h2>
+      <a href="https://www.instagram.com/hey.social_?igsh=MTE1azN2Ymg0bDY2aw==">Buradan ulaşabilirsiniz.</a>
+      <h1>Hey Social'in düzenlediği ankete:</h1>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_gv5tEN2oVr42QWgYc-y8o8fthV_Hs3JZY9O3prooBWnXIg/viewform?fbclid=PAQ0xDSwLBKK9leHRuA2FlbQIxMQABp9lOp13yTz5Kfnc1DaGzufn2BFI6i1rY-MmIMC0mHjMZT82IekUkDpgNUGej_aem_w75MtT31Cgwv5TiR1kqXLQ">Buradan ulaşabilirsiniz</a>
+      <h1>Exedra Sports iletişim bilgileri</h1>
+      <h2>Adres: Evka3 Mahallesi 129 Sokak No:28/11 Bornova 35040 Bornova/İzmir</h2>
+      <h2>Tel no: +90 0 (552) 521 77 52</h2>
+      <h2>Exedra Sports'un web sitesine:</h2>
+      <a href="https://exedrasports.com/">Buradan ulaşabilirsiniz</a>
+
+    `,
+    takvim: `
+      <h2>Takvim - Yapılan Etkinlikler</h2>
+      <h1>Bizim şimdiye kadarki yaptığımız etkinlikleri buradan görebilirsiniz</h1>
+      <p>Maalesef KVKK kapsamı dolayısıyla gezi fotoğraflarımızı paylaşamıyoruz.</p>
+      <h2>İlk gezimiz Evka 3 Orman yürüyüşü(Exedra tarafından düzenlenmiş)</h2>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2>İkinci gezimiz Bostanlı'da spor(HeySocial! tarafından düzenlendi.)</h2>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p>Yaşadığımız güzel anlar ve keyifli sporlar yaptığımız zamanların anı fotoğraflarımıza ulaşmak için <a href="https://heysocial.example/galeri" target="_blank" rel="noopener noreferrer">buraya tıklayın</a>.</p>
+      
+    `,
+    geribildirim: `
+      <h2>Geri Bildirim Formu</h2>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfXVxYUMNXHo7oRTzLvTajzFxLSb6H_C4XbQz6Xi0782otNLg/viewform?pli=1" frameborder="0" marginheight="0" marginwidth="0">Yükleniyor…</iframe>
+      
+    `
+  };
+
+  // İlk sayfa olarak ana sayfa yüklensin
+  content.innerHTML = pages.anasayfa;
+
+  // Menü butonları
+  const btns = document.querySelectorAll('nav button');
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      if(btn.id === 'btn-anasayfa') content.innerHTML = pages.anasayfa;
+      else if(btn.id === 'btn-iletisim') content.innerHTML = pages.iletisim;
+      else if(btn.id === 'btn-takvim') content.innerHTML = pages.takvim;
+      else if(btn.id === 'btn-geribildirim') content.innerHTML = pages.geribildirim;
+    });
+  });
+</script>
+
+</body>
+</html>
